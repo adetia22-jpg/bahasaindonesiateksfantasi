@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPI Cerita Fantasi - Kelas 7 SMP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ifp-container">
+        <!-- Header / Navigasi Atas -->
+        <header class="app-header">
+            <div class="logo"> Bahasa Indonesia Kelas 7</div>
+            <h1>MEDIA PEMBELAJARAN INTERAKTIF: CERITA FANTASI</h1>
+            <button class="fullscreen-btn" onclick="toggleFullScreen()"> Display</button>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar Navigasi -->
+            <nav class="sidebar">
+                <button class="nav-btn active" onclick="switchTab('beranda')"> Beranda</button>
+                <button class="nav-btn" onclick="switchTab('pengertian')"> Pengertian & Ciri</button>
+                <button class="nav-btn" onclick="switchTab('struktur')"> Struktur</button>
+                <button class="nav-btn" onclick="switchTab('unsur')"> Unsur Intrinsik</button>
+                <button class="nav-btn" onclick="switchTab('kuis')"> Kuis Interaktif</button>
+                <button class="nav-btn highlight" onclick="switchTab('papancoret')"> Papan Coret IFP</button>
+            </nav>
+
+            <!-- Area Konten Utama -->
+            <main class="content-area">
+                <!-- Tab Beranda -->
+                <section id="beranda" class="tab-content active">
+                    <div class="welcome-card">
+                        <h2>Selamat Datang di Dunia Fantasi!</h2>
+                        <p>Media Pembelajaran Interaktif berbasis IFP/PID untuk eksplorasi materi Cerita Fantasi.</p>
+                        <div class="menu-grid">
+                            <div class="card" onclick="switchTab('pengertian')">
+                                <h3> Pengertian & Ciri</h3>
+                                <p>Pahami konsep dasar cerita fantasi dan keunikannya.</p>
+                            </div>
+                            <div class="card" onclick="switchTab('struktur')">
+                                <h3> Struktur Teks</h3>
+                                <p>Pelajari Orientasi, Komplikasi, dan Resolusi.</p>
+                            </div>
+                            <div class="card" onclick="switchTab('unsur')">
+                                <h3> Unsur Intrinsik</h3>
+                                <p>Tokoh, Latar, Alur, Tema, dan Amanat.</p>
+                            </div>
+                            <div class="card" onclick="switchTab('kuis')">
+                                <h3> Kuis Interaktif</h3>
+                                <p>Uji pemahamanmu bersama teman di depan kelas!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Pengertian & Ciri -->
+                <section id="pengertian" class="tab-content">
+                    <h2>Apa itu Cerita Fantasi?</h2>
+                    <div class="info-box">
+                        <p><strong>Cerita Fantasi</strong> adalah teks narasi yang mengisahkan kisah rekaan, imajinatif, dan tidak terjadi di dunia nyata. Di dalamnya terdapat keajaiban, keanehan, atau misteri yang tidak dijumpai di alam nyata.</p>
+                    </div>
+                    <h3>Ciri-Ciri Utama Cerita Fantasi:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Ada Keajaiban / Keanehan:</strong> Memiliki keajaiban seperti sihir, kekuatan super, atau dunia paralel.</li>
+                        <li><strong>Ide Cerita Terbuka:</strong> Tidak dibatasi oleh realita atau kehidupan nyata.</li>
+                        <li><strong>Latar Lintas Waktu & Ruang:</strong> Menggunakan latar masa lalu, masa depan, atau dimensi lain.</li>
+                        <li><strong>Tokoh Unik:</strong> Memiliki kesaktian atau kemampuan khusus di luar nalar manusia.</li>
+                        <li><strong>Bersifat Fiksi:</strong> Murni hasil imajinasi penulis.</li>
+                    </ul>
+                </section>
+
+                <!-- Tab Struktur -->
+                <section id="struktur" class="tab-content">
+                    <h2>Struktur Teks Cerita Fantasi</h2>
+                    <p class="instruction">Ketuk salah satu bagian di bawah ini untuk melihat penjelasannya!</p>
+                    <div class="accordion">
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">1. Orientasi (Pengenalan)</div>
+                            <div class="acc-body">
+                                <p>Mengenalkan latar tempat, waktu, tokoh, serta konflik awal cerita. Di bagian ini pembaca diajak masuk ke dunia fantasi.</p>
+                            </div>
+                        </div>
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">2. Komplikasi (Puncak Konflik)</div>
+                            <div class="acc-body">
+                                <p>Bagian timbulnya masalah hingga puncak masalah (klimaks). Tokoh mengalami berbagai hambatan dan menggunakan kemampuan ajaibnya.</p>
+                            </div>
+                        </div>
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">3. Resolusi (Penyelesaian)</div>
+                            <div class="acc-body">
+                                <p>Penyelesaian dari masalah yang timbul. Menggambarkan bagaimana akhir cerita (berakhir bahagia atau sedih).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Unsur Intrinsik -->
+                <section id="unsur" class="tab-content">
+                    <h2>Unsur Intrinsik Cerita Fantasi</h2>
+                    <div class="grid-2">
+                        <div class="box">
+                            <h3> Tema</h3>
+                            <p>Gagasan utama atau ide dasar cerita (misal: persahabatan, petualangan, kebaikan vs kejahatan).</p>
+                        </div>
+                        <div class="box">
+                            <h3> Tokoh & Penokohan</h3>
+                            <p>Pemeran dalam cerita dan wataknya (protagonis, antagonis, tritagonis).</p>
+                        </div>
+                        <div class="box">
+                            <h3> Latar / Setting</h3>
+                            <p>Meliputi latar tempat, waktu, dan suasana (bisa sezaman atau lintas waktu).</p>
+                        </div>
+                        <div class="box">
+                            <h3> Alur / Plot</h3>
+                            <p>Jalan cerita yang terdiri dari alur maju, alur mundur, atau alur campuran.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab Kuis Interaktif -->
+                <section id="kuis" class="tab-content">
+                    <h2>Kuis Interaktif Cerita Fantasi</h2>
+                    <div id="quiz-container">
+                        <div id="question-box" class="question-card">
+                            <h3 id="question-text">Pertanyaan akan muncul di sini...</h3>
+                            <div id="options-container" class="options-grid"></div>
+                        </div>
+                        <div id="quiz-feedback" class="feedback"></div>
+                        <div class="quiz-controls">
+                            <button id="next-btn" class="action-btn" onclick="nextQuestion()">Soal Berikutnya </button>
+                            <button class="action-btn restart" onclick="resetQuiz()">Ulangi Kuis </button>
+                        </div>
+                        <div id="score-display" class="score-board">Skor: <span id="score">0</span></div>
+                    </div>
+                </section>
+
+                <!-- Tab Papan Coret IFP -->
+                <section id="papancoret" class="tab-content">
+                    <h2>Papan Coret Interaktif (Canvas IFP)</h2>
+                    <p>Gunakan jari atau stylus IFP untuk menggambar/menulis di papan ini!</p>
+                    <div class="canvas-controls">
+                        <label for="colorPicker">Warna:</label>
+                        <input type="color" id="colorPicker" value="#2b6cb0">
+                        <label for="brushSize">Ukuran:</label>
+                        <input type="range" id="brushSize" min="2" max="20" value="5">
+                        <button class="action-btn clear" onclick="clearCanvas()">Hapus Semua</button>
+                    </div>
+                    <canvas id="drawCanvas"></canvas>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
